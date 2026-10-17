@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "dev.lyvt.fastitems.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": ["ItemEntityRendererMixin", "ItemEntityRenderStateMixin", "ItemStackRenderStateAccessor", "LayerRenderStateAccessor"],
+  "injectors": { "defaultRequire": 1 }
+}

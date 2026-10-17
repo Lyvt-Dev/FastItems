@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "fastitems",
+  "version": "${version}",
+  "name": "Fast Items 1.21.11 Port",
+  "description": "Client-side billboard rendering and reduced geometry for dropped items.",
+  "authors": ["Lyvt-Dev", "Noryea (original concept and implementation)"],
+  "license": "CC0-1.0",
+  "environment": "client",
+  "entrypoints": { "client": ["dev.lyvt.fastitems.FastItemsMod"] },
+  "mixins": ["fastitems.mixins.json"],
+  "depends": { "fabricloader": ">=0.20.0", "minecraft": "1.21.11", "java": ">=21", "fabric-api": "*" }
+}

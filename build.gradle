@@ -1,0 +1,24 @@
+plugins { id 'fabric-loom' version '1.14.10'; id 'maven-publish' }
+version = '1.0.0+1.21.11'
+group = 'dev.lyvt.fastitems'
+base { archivesName = 'fastitems-port' }
+repositories { mavenCentral() }
+dependencies {
+ minecraft 'com.mojang:minecraft:1.21.11'
+ mappings loom.officialMojangMappings()
+ modImplementation 'net.fabricmc:fabric-loader:0.20.0'
+ modImplementation 'net.fabricmc.fabric-api:fabric-api:0.141.6+1.21.11'
+}
+java { toolchain.languageVersion = JavaLanguageVersion.of(21); withSourcesJar() }
+tasks.withType(JavaCompile).configureEach { options.release = 21 }
+processResources { inputs.property 'version', project.version; filesMatching('fabric.mod.json') { expand version: project.version } }
+jar { from('LICENSE') }
+
+fabricApi {
+    configureTests {
+        createSourceSet = true
+        modId = 'fastitems-test'
+        enableGameTests = false
+        enableClientGameTests = true
+    }
+}

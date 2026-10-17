@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "id": "fastitems-test",
+  "version": "1.0.0",
+  "name": "Fast Items rendering tests",
+  "environment": "client",
+  "entrypoints": { "fabric-client-gametest": ["dev.lyvt.fastitems.FastItemsClientTest"] }
+}
